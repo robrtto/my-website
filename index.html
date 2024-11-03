@@ -7,13 +7,30 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body> 
-    <div class="intro">
-        <header>
-            <h1>Rejopachí</h1>
-            <h3>Art Meets With Technology</h3>
-            <button class="explore-button" onclick="location.href='#portfolio'">
-        </header>
-    </div>
+    <header>
+        <h1>Rejopachí</h1>
+        <h3>Art Meets Technology</h3>
+        <button class="menu-toggle" aria-label="Toggle navigation">
+            <span>></span>
+            <span>></span>
+            <span>></span>
+        </button>
+        <nav class="nav-menu">
+            <a href="#portfolio">Art Portfolio</a>
+            <a href="#projects">Programming Projects</a>
+            <a href="#about">About Me</a>
+            <a href="#contact">Contact Me</a>
+        </nav>
+    </header>
+
+     <!-- Full-Screen Intro Section -->
+     <section class="intro">
+        <div class="intro-content">
+            <h2>Art Portfolio</h2>
+            <button class="learn-more-button" onclick="location.href='#portfolio'">Learn More</button>
+            <button class="explore-button" onclick="location.href='#portfolio'">Explore Portfolio</button>
+        </div>
+    </section>
    
     <section id="portfolio">
         <h2> My Art Portfolio</h2>
@@ -25,8 +42,6 @@
         <!--testtt-->
     </section>
     
-
-
     <section id="projects">
         <h2>Programming Projects</h2>
          <!-- Showcase projects here -->

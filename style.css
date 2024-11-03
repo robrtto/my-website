@@ -7,10 +7,10 @@
 
 body {
     font-family: 'San Francisco', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    padding-top: 80px; /* Adjusted for fixed header */
     background-color: #fff;
 }
 
+/* Main Navigation Header */
 header {
     position: fixed;
     top: 0;
@@ -27,6 +27,7 @@ header {
 h1 {
     font-size: 2.5rem;
     color: #000;
+    text-decoration: none;
 }
 
 h2 {
@@ -38,12 +39,16 @@ h2 {
     padding-bottom: 0.5rem;
 }
 
+/* Intro Section */
 .intro {
     position: relative;
     width: 100%;
     height: 100vh;
-    background: url('images/la_conquistaa.jpg') no-repeat center/cover;
-
+    background: url('images/your_art_piece.jpg') no-repeat center center/cover; /* Replace with your image path */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .intro::before {
@@ -53,42 +58,35 @@ h2 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0,6); 
+    background-color: rgba(0, 0, 0, 0.6); /* Transparent overlay */
 }
 
-.intro header {
+.intro-content {
     position: relative;
     z-index: 1;
-    text-align: center;
     color: white;
-    top: 50%;
-    transform: translateY(-50);
 }
 
-.intro h1 {
+.intro h2 {
     font-size: 3em;
     color: white;
-    margin-bottom: 0.5;
-}
-.intro h3 {
-    font-size: 1.5em;
-    color: white;
-    margin-bottom: 1.5em;
+    margin-bottom: 1rem;
 }
 
-.explore-button {
-    background-color: #161c22;
+.learn-more-button, .explore-button {
+    background-color: #007aff; /* Apple blue color */
     color: white;
     border: none;
-    padding: 1em 2em;
+    padding: 0.8em 1.5em;
     font-size: 1.2em;
+    margin: 0.5em;
     cursor: pointer;
     border-radius: 8px;
     transition: background-color 0.3s ease;
 }
 
-.explore-button:hover{
-    background-color: #333;
+.learn-more-button:hover, .explore-button:hover {
+    background-color: #005bb5; /* Darker blue on hover */
 }
 
 /* Navigation Styling */
@@ -107,32 +105,6 @@ h2 {
 
 .nav-menu a:hover {
     color: #1f0b22;
-}
-
-/* Menu Toggle (Hamburger) */
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    border: none;
-    background: none;
-}
-
-.menu-toggle span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: #333;
-    transition: background-color 0.3s ease;
-}
-
-/* Gallery Styling */
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
 }
 
 /* Responsive Navigation Menu */
@@ -160,7 +132,6 @@ h2 {
         display: flex; /* Show hamburger menu on mobile */
     }
 
-    /* Opened Menu */
     .nav-menu.open {
         display: flex;
     }
