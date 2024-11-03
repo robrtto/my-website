@@ -6,8 +6,8 @@ document.addEventListener('scroll', () => {
         header.classList.remove('scrolled');
     }
 });
-document.querySelector('.menu-togg;e').addEventListener('click', function(){
+
+document.querySelector('.menu-toggle').addEventListener('click', function() {
     document.querySelector('.nav-menu').classList.toggle('open');
-    
-})
+});
 
