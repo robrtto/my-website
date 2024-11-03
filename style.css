@@ -1,22 +1,46 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-    
     font-family: 'San Francisco', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    padding-top: 60px;
-    margin-top: 80px;
+    padding-top: 80px; /* Adjusted for fixed header */
     background-color: #fff;
 }
-nav a {
-    margin: 0 2rem;
-    padding: 0.5rem;
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    transition: color 0.3s ease;
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
 }
 
+h1 {
+    font-size: 2.5rem;
+    color: #000;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #444;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+/* Navigation Styling */
 .nav-menu {
-    display:  flex;
+    display: flex;
     gap: 2rem;
 }
 
@@ -26,13 +50,13 @@ nav a {
     font-weight: bold;
     padding: 0.5rem 0;
     transition: color 0.3s ease;
-
 }
 
-.nav-menu a:hover{
+.nav-menu a:hover {
     color: #1f0b22;
 }
 
+/* Menu Toggle (Hamburger) */
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -47,46 +71,21 @@ nav a {
     width: 25px;
     height: 3px;
     background-color: #333;
-    transition: background-color 0.3 ease;
+    transition: background-color 0.3s ease;
 }
 
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    
-}
-
-h1{
-    font-size: 2.5rem;
-    color: #000
-}
-
-h2 {
-    font-size:1.8rem;
-    color: #444;
-    margin-bottom: 1rem;
-    border-bottom: 2px solid;
-    display: inline-block;
-    padding-bottom: 0.5rem;
-}
+/* Gallery Styling */
 .gallery {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
-
 }
-@media (max-width:768px) {
+
+/* Responsive Navigation Menu */
+@media (max-width: 768px) {
     .nav-menu {
-        display: none;
+        display: none; /* Hide menu by default on mobile */
         position: absolute;
         top: 60px;
         right: 0;
@@ -103,23 +102,22 @@ h2 {
         width: 100%;
         border-bottom: 1px solid #ddd;
     }
+
     .menu-toggle {
-        display: flex;
+        display: flex; /* Show hamburger menu on mobile */
     }
+
+    /* Opened Menu */
     .nav-menu.open {
         display: flex;
     }
+
     header {
         flex-direction: column;
         align-items: center;
     }
-    nav {
-        padding: 0.5rem;
-    }
-    nav a {
-        margin: 0.5rem
-    }
 }
+
 section {
     padding: 2rem;
     max-width: 1200px;
