@@ -38,6 +38,59 @@ h2 {
     padding-bottom: 0.5rem;
 }
 
+.intro {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('images/la_conquistaa.jpg') no-repeat center/cover;
+
+}
+
+.intro::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0,6); 
+}
+
+.intro header {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    top: 50%;
+    transform: translateY(-50);
+}
+
+.intro h1 {
+    font-size: 3em;
+    color: white;
+    margin-bottom: 0.5;
+}
+.intro h3 {
+    font-size: 1.5em;
+    color: white;
+    margin-bottom: 1.5em;
+}
+
+.explore-button {
+    background-color: #161c22;
+    color: white;
+    border: none;
+    padding: 1em 2em;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.explore-button:hover{
+    background-color: #333;
+}
+
 /* Navigation Styling */
 .nav-menu {
     display: flex;
